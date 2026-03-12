@@ -21,7 +21,7 @@ pipeline {
 
         stage('Push Docker Image') {
             steps {
-                sh 'docker login -u ht024112001 -p YOUR_PASSWORD'
+                sh 'docker login -u ht024112001 -p 123456789'
                 sh 'docker push ht024112001/pipeline-demo'
             }
         }
