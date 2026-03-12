@@ -13,17 +13,17 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
+	stage('Build Docker Image') {
             steps {
-                sh 'docker build -t $IMAGE_NAME .'
+                sh 'docker build -t ht024112001/pipeline-demo .'
             }
         }
 
         stage('Push Docker Image') {
             steps {
-                sh 'docker push $IMAGE_NAME'
+                sh 'docker login -u ht024112001 -p YOUR_PASSWORD'
+                sh 'docker push ht024112001/pipeline-demo'
             }
         }
-
     }
 }
