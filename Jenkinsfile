@@ -9,7 +9,7 @@ pipeline {
 
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/HtunTaukOo/pipeline-demo.git'
+                git branch: 'main', url:  'https://github.com/HtunTaukOo/pipeline-demo.git'
             }
         }
 
